@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(650,230)" to="(650,270)"/>
+    <wire from="(590,230)" to="(590,270)"/>
+    <wire from="(500,270)" to="(590,270)"/>
+    <wire from="(930,190)" to="(930,200)"/>
+    <wire from="(650,270)" to="(670,270)"/>
+    <wire from="(580,460)" to="(600,460)"/>
+    <wire from="(680,190)" to="(700,190)"/>
+    <wire from="(880,200)" to="(880,460)"/>
+    <wire from="(600,460)" to="(630,460)"/>
+    <wire from="(630,230)" to="(630,460)"/>
+    <wire from="(630,460)" to="(880,460)"/>
+    <wire from="(490,410)" to="(490,460)"/>
+    <wire from="(890,190)" to="(930,190)"/>
+    <wire from="(400,400)" to="(480,400)"/>
+    <wire from="(700,190)" to="(700,400)"/>
+    <wire from="(250,190)" to="(540,190)"/>
+    <wire from="(600,460)" to="(600,510)"/>
+    <wire from="(700,190)" to="(870,190)"/>
+    <wire from="(490,460)" to="(560,460)"/>
+    <wire from="(500,400)" to="(700,400)"/>
+    <comp lib="4" loc="(680,190)" name="RAM">
+      <a name="addrWidth" val="11"/>
+      <a name="dataWidth" val="24"/>
+      <a name="bus" val="asynch"/>
+    </comp>
+    <comp lib="1" loc="(890,190)" name="Controlled Buffer">
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="0" loc="(400,400)" name="Pin">
+      <a name="width" val="24"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(793,179)" name="Text">
+      <a name="text" val="Bus de Datos de 24 bits"/>
+    </comp>
+    <comp lib="6" loc="(487,296)" name="Text">
+      <a name="text" val="Selector"/>
+    </comp>
+    <comp lib="0" loc="(930,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="24"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(414,178)" name="Text">
+      <a name="text" val="Bus de Direcciones de 2048 bits"/>
+    </comp>
+    <comp lib="0" loc="(600,510)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(617,86)" name="Text">
+      <a name="text" val="Memoria RAM asíncrona de 2048 x 24 bits"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="6" loc="(971,155)" name="Text">
+      <a name="text" val="Salida"/>
+    </comp>
+    <comp lib="6" loc="(667,485)" name="Text">
+      <a name="text" val="Bus de Control"/>
+    </comp>
+    <comp lib="1" loc="(560,460)" name="NOT Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(670,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(136,191)" name="Text">
+      <a name="text" val="Dirección"/>
+    </comp>
+    <comp lib="6" loc="(355,360)" name="Text">
+      <a name="text" val="Entrada"/>
+    </comp>
+    <comp lib="1" loc="(500,400)" name="Controlled Buffer">
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="6" loc="(597,551)" name="Text">
+      <a name="text" val="R/W'"/>
+    </comp>
+    <comp lib="6" loc="(678,298)" name="Text">
+      <a name="text" val="CLR"/>
+    </comp>
+    <comp lib="0" loc="(250,190)" name="Pin">
+      <a name="width" val="11"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(500,270)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+  </circuit>
+</project>
